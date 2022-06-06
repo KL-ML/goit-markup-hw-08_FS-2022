@@ -1,0 +1,10 @@
+
+@mixin FontStyles($fw, $fs, $lh, $ta, $ls, $c, $tt) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    text-align: $ta;
+    letter-spacing: $ls;
+    color: $c;
+    text-transform: $tt;
+}

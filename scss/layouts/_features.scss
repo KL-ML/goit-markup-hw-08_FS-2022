@@ -1,0 +1,29 @@
+/*Особливості*/
+.features {
+    display: flex;
+    margin-left: -30px;
+    margin-top: -30px;
+
+    &__item {
+            flex-basis: calc(100% / 4 - 30px);
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+    &__icon-box {
+            @extend %flexstyle;
+            background-color: var(--team-background);
+            border-radius: 4px;
+            height: 120px;
+            margin-bottom: 30px;
+        }
+
+}
+.features__title {
+    @include FontStyles(700, 14px, 1.14, nula, 0.03em, nula, uppercase);
+
+    margin-bottom: 10px;
+}
+
+.features__text {
+    @include FontStyles(nula, 14px, 1.71, nula, 0.03em, var(--light-grey), nula);
+}

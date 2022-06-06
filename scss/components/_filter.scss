@@ -1,0 +1,43 @@
+/*Фільтри*/
+.filter {
+    display: flex;
+    justify-content: center;
+}
+.filter--margins {
+        margin-top: 0px;
+        margin-bottom: 50px;
+}
+.filter__btn {
+        font-family: $BodyFont, $Sans-Serif;
+        @include FontStyles(500, 16px, 1.62, center, 0.03em, var(--dark-grey), nula);
+
+        background-color: var(--team-background);
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+
+        min-width: 45px;
+        min-height: 38px;
+        padding: 6px 22px;
+
+        transition: color  $transitionLinks,
+                    background-color  $transitionLinks,
+                    box-shadow  $transitionLinks;
+
+            &:hover,
+            &:focus {
+                    color: var(--hero-h1-white);
+                    background-color: var(--hover-blue);
+                    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                        0px 1px 2px rgba(0, 0, 0, 0.08),
+                        0px 2px 2px rgba(0, 0, 0, 0.12);
+                }
+    }
+.filter__item {
+        margin-right: 8px;
+        display: block;
+
+        &:last-child {
+                margin-right: 0px;
+            }
+    }

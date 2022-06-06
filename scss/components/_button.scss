@@ -1,0 +1,24 @@
+/*Кнопка*/
+.button {
+            font-family: $BodyFont,
+                $Sans-Serif;
+            @include FontStyles(700, 16px, 1.88, center, 0.06em, var(--hero-h1-white), nula);
+    
+            cursor: pointer;
+            background-color: var(--hover-blue);
+            border: none;
+            border-radius: 4px;
+    
+            min-width: 200px;
+            min-height: 50px;
+            padding: 10px 32px;
+            margin: 0 auto;
+            display: block;
+    
+            transition: background-color $transitionLinks;
+    
+    &:hover,
+    &:focus {
+        background-color: var(--hero-button-hover);
+    }
+}

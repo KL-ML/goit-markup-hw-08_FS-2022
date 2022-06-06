@@ -1,0 +1,19 @@
+/*Стилі логотипу*/
+.logo {
+    font-family: $LogoFont, $Sans-Serif;
+    font-style: normal;
+    @include FontStyles(700, 26px, 1.19, nula, 0.03em, nula, nula);
+
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+        color: inherit;
+    }
+
+    &__accent {
+        color: var(--hover-blue);
+    }
+}
+

@@ -1,0 +1,43 @@
+/*Посилання на соціальні мережі*/
+.social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    &__item {
+        flex-basis: calc((100% - 10 * 4) / 4);
+    }
+}
+
+.social__link {
+    @extend %flexstyle;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    transition: background-color $transitionLinks;
+
+    &:hover,
+    &:focus {
+        background-color: var(--hover-blue);
+    }
+}
+.social__icon {
+        fill: var(--border-grey);
+
+        transition: fill $transitionLinks;
+
+.social__link:hover &,
+.social__link:focus & {
+        fill: var(--hero-h1-white);
+    }
+}
+.social__link--dark {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+.social__icon--white {
+        fill: var(--hero-h1-white);
+    }
+

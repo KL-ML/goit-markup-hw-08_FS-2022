@@ -1,0 +1,36 @@
+/*Постоянные клиенты*/
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+            flex-basis: calc((100% - 30 * 6) / 6)
+        }
+}
+.clients__link {
+    @extend %flexstyle;
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid var(--border-grey);
+    border-radius: 4px;
+
+    transition: border-color $transitionLinks;
+
+    &:hover,
+    &:focus {
+        border-color: var(--hover-blue);
+    }
+}
+.clients__icon {
+    fill: var(--border-grey);
+
+    transition: fill $transitionLinks;
+
+    .clients__link:hover &,
+    .clients__link:focus & {
+        fill: var(--hover-blue);
+    }
+}

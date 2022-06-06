@@ -1,0 +1,24 @@
+/*Загальні стилі*/
+body {
+    font-family: $BodyFont, $Sans-Serif;
+    color: var(--dark-grey);
+}
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    
+    &__title {
+        @include FontStyles(700, 36px, 1.16, center, 0.03em, nula, nula);
+
+    margin-bottom: 50px;
+    }
+    &--no-padding--top {
+            padding-top: 0px;
+        }
+    &--other-background {
+            background-color: var(--team-background);
+        }
+
+}
+
+
