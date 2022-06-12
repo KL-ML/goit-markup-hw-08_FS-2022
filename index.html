@@ -19,7 +19,16 @@
     <!--Верхняя линия-->
     <header class="header">
         <div class="container header__container">
-            <a class="logo header__logo" lang="en" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
+            <a 
+                class="logo header__logo" 
+                lang="en" 
+                href="./index.html">
+                <span 
+                    class="logo__accent">
+                        Web
+                </span>
+                Studio
+            </a>
             <nav class="navigation">
                 <ul class="navigation__list">
                     <li class="navigation__item">
@@ -39,7 +48,7 @@
             <ul class="contacts">
                 <li class="contacts__item">
                     <a class="contacts__link" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon" width="16" height="16">
+                        <svg class="contacts__icon">
                             <use href="./images/symbol-defs.svg#mail"></use>
                         </svg>
                         info@devstudio.com
@@ -47,13 +56,45 @@
                 </li>
                 <li class="contacts__item">
                     <a class="contacts__link" href="tel:+380961111111">
-                        <svg class="contacts__icon" width="16" height="16">
+                        <svg class="contacts__icon">
                             <use href="./images/symbol-defs.svg#smartphone"></use>
                         </svg>
                         +38 096 111 11 11
                     </a>
                 </li>
             </ul>
+            <button 
+                type="button" 
+                class="menu-button"
+                aria-expanded="false"
+                aria-controls="menu-conteiner"
+                data-menu-button>
+                <svg 
+                    width="40px" 
+                    height="40px" 
+                    aria-label="Переключатель мобильного меню">
+                    <use class="icon-menu" href="./images/icons.svg#menu"></use>
+                    <use class="icon-close" href="./images/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="menu-conteiner" id="menu-conteiner" data-menu>
+                <ul>
+                    <li>Студия</li>
+                    <li>Портфолио</li>
+                    <li>Контакты</li>
+                </ul>
+                <ul>
+                    <li>+38 096 111 11 11</li>
+                    <li>info@devstudio.com</li>
+                </ul>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Facebook</li>
+                    <li>LinkedIn</li>
+                </ul>
+
+            </div>
         </div>
     </header>
 
@@ -120,7 +161,7 @@
 
         </section>
         <!--Чем мы занимаемся-->
-        <section class="section section--no-padding--top">
+        <section class="section section--no-padding--top section--display--none">
             <div class="container">
                 <h2 class="section__title">Чем мы занимаемся</h2>
                 <ul class="activity">
@@ -148,7 +189,7 @@
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="team">
                     <li class="team__item">
-                        <img src="./images/team/card1/img.jpg" alt="Игорь Демьяненко" width="270"
+                        <img src="./images/team/card1/img.jpg" alt="Игорь Демьяненко" width="100%"
                             height="260">
                         <div class="team__content">
                             <h3 class="team__title">Игорь Демьяненко</h3>
@@ -191,7 +232,7 @@
 
                     </li>
                     <li class="team__item">
-                        <img src="./images/team/card2/img.jpg" alt="Ольга Репина" width="270"
+                        <img src="./images/team/card2/img.jpg" alt="Ольга Репина" width="100%"
                             height="260">
                         <div class="team__content">
                             <h3 class="team__title">Ольга Репина</h3>
@@ -233,7 +274,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team/card3/img.jpg" alt="Николай Тарасов" width="270"
+                        <img src="./images/team/card3/img.jpg" alt="Николай Тарасов" width="100%"
                             height="260">
                         <div class="team__content">
                             <h3 class="team__title">Николай Тарасов</h3>
@@ -275,7 +316,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team/card4/img.jpg" alt="Михаил Ермаков" width="270"
+                        <img src="./images/team/card4/img.jpg" alt="Михаил Ермаков" width="100%"
                             height="260">
                         <div class="team__content">
                             <h3 class="team__title">Михаил Ермаков</h3>
@@ -380,64 +421,64 @@
     <!--Подвал-->
     <footer class="footer">
         <div class="container footer__conteiner">
-            <div class="footer__logo-group">
-                <a class="logo footer__logo" lang="en" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
-                <address class="address-group">
-                    <ul>
-                        <li class="address-group__item">
-                            <a href="https://bit.ly/3pXMvUd" 
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                г. Киев, пр-т Леси Украинки, 26
+            <div class="footer__group">
+                <div class="footer__logo-group">
+                    <a class="logo footer__logo" lang="en" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
+                    <address class="address-group">
+                        <ul>
+                            <li class="address-group__item">
+                                <a href="https://bit.ly/3pXMvUd" target="_blank" rel="noopener noreferrer">
+                                    г. Киев, пр-т Леси Украинки, 26
+                                </a>
+                            </li>
+                            <li class="address-group__item address-group__item--grey">
+                                <a href="mailto:info@devstudio.com">info@example.com
+                                </a>
+                            </li>
+                            <li class="address-group__item address-group__item--grey">
+                                <a href="tel:+380961111111">+38 096 111 11 11
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="links-group">
+                    <h2 class="group-title">Присоединяйтесь</h2>
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link social__link--dark" href="" target="_blank" rel="noopenen noreferrer"
+                                aria-label="иконка Инстаграм">
+                                <svg class="social__icon--white" width="20px" height="20px">
+                                    <use href="./images/symbol-defs.svg#instagram"></use>
+                                </svg>
                             </a>
                         </li>
-                        <li class="address-group__item address-group__item--grey">
-                            <a href="mailto:info@devstudio.com">info@example.com
+                        <li class="social__item">
+                            <a class="social__link social__link--dark" href="" target="_blank" rel="noopenen noreferrer"
+                                aria-label="иконка Твиттер">
+                                <svg class="social__icon--white" width="20px" height="20px">
+                                    <use href="./images/symbol-defs.svg#twitter"></use>
+                                </svg>
                             </a>
                         </li>
-                        <li class="address-group__item address-group__item--grey">
-                            <a href="tel:+380961111111">+38 096 111 11 11
+                        <li class="social__item">
+                            <a class="social__link social__link--dark" href="" target="_blank" rel="noopenen noreferrer"
+                                aria-label="иконка Фейсбук">
+                                <svg class="social__icon--white" width="20px" height="20px">
+                                    <use href="./images/symbol-defs.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link--dark" href="" target="_blank" rel="noopenen noreferrer"
+                                aria-label="иконка Линкедин">
+                                <svg class="social__icon--white" width="20px" height="20px">
+                                    <use href="./images/symbol-defs.svg#linkedin"></use>
+                                </svg>
                             </a>
                         </li>
                     </ul>
-                </address>
-            </div>
-            <div class="links-group">
-                <h2 class="group-title">Присоединяйтесь</h2>
-                <ul class="social">
-                    <li class="social__item">
-                        <a class="social__link social__link--dark" href="" target="_blank" rel="noopenen noreferrer"
-                            aria-label="иконка Инстаграм">
-                            <svg class="social__icon--white" width="20px" height="20px">
-                                <use href="./images/symbol-defs.svg#instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link social__link--dark" href="" target="_blank" rel="noopenen noreferrer"
-                            aria-label="иконка Твиттер">
-                            <svg class="social__icon--white" width="20px" height="20px">
-                                <use href="./images/symbol-defs.svg#twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link social__link--dark" href="" target="_blank" rel="noopenen noreferrer"
-                            aria-label="иконка Фейсбук">
-                            <svg class="social__icon--white" width="20px" height="20px">
-                                <use href="./images/symbol-defs.svg#facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link social__link--dark" href="" target="_blank" rel="noopenen noreferrer"
-                            aria-label="иконка Линкедин">
-                            <svg class="social__icon--white" width="20px" height="20px">
-                                <use href="./images/symbol-defs.svg#linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
             <div class="form-group">
                 <h2 class="group-title">Подпишитесь на рассылку</h2>
@@ -456,7 +497,7 @@
         </div>
     </footer>
 <!--Модальное окно-->
-<div class="backdrop is-hidden" data-modal>
+<!--div class="backdrop is-hidden" data-modal>
     <div class="modal-wrapper">
         
         <form class="modal-form">
@@ -511,8 +552,9 @@
             </svg>
         </button>
     </div>
-</div>
+</div-->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 

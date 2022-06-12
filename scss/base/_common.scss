@@ -1,24 +1,35 @@
-/*Загальні стилі*/
 body {
     font-family: $BodyFont, $Sans-Serif;
     color: var(--dark-grey);
 }
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-    
-    &__title {
-        @include FontStyles(700, 36px, 1.16, center, 0.03em, nula, nula);
 
-    margin-bottom: 50px;
+
+.section {
+    @include mq(not-desktop) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
     }
     &--no-padding--top {
-            padding-top: 0px;
-        }
+        padding-top: 0px;
+    }
+    
     &--other-background {
-            background-color: var(--team-background);
-        }
-
+        background-color: var(--team-background);
+    }
 }
+.section__title {
+    @include mq(not-desktop) {
+        @include FontStyles(700, 28px, 1.18, center, 0.03em, null, null);
+        
+        margin-bottom: 30px;
+    }
 
+    @include FontStyles(700, 36px, 1.16, center, 0.03em, null, null);
 
+    margin-bottom: 50px;
+}

@@ -1,8 +1,10 @@
-/*Стилі логотипу*/
 .logo {
     font-family: $LogoFont, $Sans-Serif;
     font-style: normal;
-    @include FontStyles(700, 26px, 1.19, nula, 0.03em, nula, nula);
+    @include FontStyles(700, 24px, 1.16, null, 0.03em, null, null);
+    @include mq(desktop) {
+        @include FontStyles(700, 26px, 1.19, null, 0.03em, null, null);
+    }
 
     text-decoration: none;
     color: inherit;
@@ -15,5 +17,5 @@
     &__accent {
         color: var(--hover-blue);
     }
+    
 }
-

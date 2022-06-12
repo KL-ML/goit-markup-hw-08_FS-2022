@@ -1,0 +1,21 @@
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    @include mq(tablet) {
+        display: none;
+    }
+    padding: 10px 0;
+    
+    & .icon-close {
+        display: none;
+    }
+    &.is-open .icon-close {
+        display: block;
+    }
+    &.is-open .icon-menu {
+        display: none;
+    }
+}
