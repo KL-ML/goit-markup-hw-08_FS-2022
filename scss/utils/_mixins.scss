@@ -38,7 +38,16 @@
             @content;
         }
     }
+    @if $type =='retina' {
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            @content;
+        }
+    }
 }
+
 
 @mixin FontStyles($fw, $fs, $lh, $ta, $ls, $c, $tt) {
     font-weight: $fw;

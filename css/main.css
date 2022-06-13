@@ -781,12 +781,12 @@ ol {
   min-height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(../images/hero/mobile/img.jpg), -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-  background-image: url(../images/hero/mobile/img.jpg), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--hero-background);
+  background-image: url(../images/hero/mobile/img.jpg), -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
+  background-image: url(../images/hero/mobile/img.jpg), linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   padding-top: 118px;
   padding-bottom: 118px;
 }
