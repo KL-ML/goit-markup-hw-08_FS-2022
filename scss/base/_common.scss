@@ -2,7 +2,10 @@ body {
     font-family: $BodyFont, $Sans-Serif;
     color: var(--dark-grey);
 }
-
+body.modal-open,
+body.mobile-menu-open {
+    overflow: hidden;
+}
 
 .section {
     @include mq(not-desktop) {
