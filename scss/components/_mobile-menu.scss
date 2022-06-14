@@ -1,6 +1,7 @@
 .mobile-menu {
+    display: none;
     @include mq (mobile-only) {
-        display: none;
+
         
         z-index: 1;
         position: fixed;
@@ -12,7 +13,7 @@
         padding: 48px 40px;
         
         background-color: var(--hero-h1-white);
-        
+
         &.is-open {
             display: flex;
             flex-direction: column;
@@ -37,6 +38,8 @@
 }
 .mobile-menu__contacts-link {
     @include FontStyles(500, 24px, 1.17, null, 0.02em, var(--light-grey), null);
+    transition: color $transitionLinks,
+                font-size $transitionLinks;
     &:hover,
     &:focus {
         @include FontStyles(500, 34px, 1.18, null, 0.02em, var(--hover-blue), null);}

@@ -5,8 +5,14 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    transition: fill $transitionLinks;
     @include mq(tablet) {
         display: none;
+    }
+    &:hover,
+    &:focus {
+        fill: var(--hover-blue);
+        cursor: pointer;
     }
     padding: 10px 0;
     
