@@ -1,8 +1,6 @@
 .mobile-menu {
     display: none;
     @include mq (mobile-only) {
-
-        
         z-index: 1;
         position: fixed;
         top: 0;
