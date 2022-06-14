@@ -1,5 +1,6 @@
 .backdrop {
     position: fixed;
+    z-index: 100;
     @include mq(not-desktop) {
         display: flex;
         align-items: center;

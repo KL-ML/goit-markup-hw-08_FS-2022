@@ -6,24 +6,24 @@
 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;  
+    background-position: top;  
     background-color: var(--hero-background);
 
     background-image: 
-        url(../images/hero/mobile/img.jpg),
         linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4));
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero/mobile/img.jpg);
 //    background-image: -webkit-image-set(url(../images/hero/mobile/img.webp) 1x),
   //                  linear-gradient(to right,
     //                    rgba(47, 48, 58, 0.4),
       //                  rgba(47, 48, 58, 0.4));
     @include mq(retina){
         background-image:
-            url(../images/hero/mobile/img@2x.jpg),
             linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4));
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero/mobile/img@2x.jpg);
     //    background-image: -webkit-image-set(url(../images/hero/mobile/img2x.webp) 2x),
       //          linear-gradient(to right,
         //                rgba(47, 48, 58, 0.4),
@@ -41,10 +41,10 @@
           //              rgba(47, 48, 58, 0.4));
         @include mq(retina) {
             background-image:
-                url(../images/hero/tablet/img@2x.jpg),
                 linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
-                    rgba(47, 48, 58, 0.4));
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero/tablet/img@2x.jpg);
         //    background-image: -webkit-image-set(url(../images/hero/tablet/img2x.webp) 2x),
           //          linear-gradient(to right,
             //                rgba(47, 48, 58, 0.4),
@@ -63,10 +63,10 @@
            //             rgba(47, 48, 58, 0.4));
         @include mq(retina){
             background-image:
-                url(../images/hero/dextop/img@2x.jpg),
                 linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
-                    rgba(47, 48, 58, 0.4));
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero/dextop/img@2x.jpg);
          //   background-image: -webkit-image-set(url(../images/hero/dextop/img2x.webp) 2x),
            //         linear-gradient(to right,
              //               rgba(47, 48, 58, 0.4),

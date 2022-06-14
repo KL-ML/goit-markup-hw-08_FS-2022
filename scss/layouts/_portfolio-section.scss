@@ -1,21 +1,26 @@
 .portfolio {
- //   display: flex;
- //   flex-wrap: wrap;
-  //  margin-left: -30px;
-  //  margin-top: -30px;
-
+    @include mq(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        margin-top: -30px;
+    }
     &__item {
         max-width: 450px;
-        margin-bottom: 30px;
- //       flex-basis: calc(100% / 3 - 30px);
-  //      margin-left: 30px;
- //       margin-top: 30px;
-    }
-    &__img-tumb {
-        position: relative;
-        overflow: hidden;
+        @include mq(mobile-only) {
+            margin-bottom: 30px;
+        }
+        @include mq(tablet) {
+            flex-basis: calc(100% / 2 - 30px);
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        @include mq(desktop) {
+            flex-basis: calc(100% / 3 - 30px);
+        }
     }
     &__content {
+        flex-grow: 1;
         padding: 20px 24px;
         border-right: 1px solid var(--portfolio-content-border);
         border-bottom: 1px solid var(--portfolio-content-border);
@@ -24,7 +29,6 @@
 
     &__title {
         @include FontStyles(700, 18px, 2.00, null, 0.06em, null, null);
-
         margin-bottom: 4px;
     }
 
@@ -34,8 +38,12 @@
 }
 
 .portfolio__link {
-    display: block;
-
+    @include mq(tablet) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    } 
+    
     transition: color $transitionLinks,
         box-shadow $transitionLinks;
 
@@ -45,9 +53,23 @@
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
 }
-
+.portfolio__img-tumb {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio__img {
+    max-width: 450px;
+    @include mq(tablet-only) {
+        width: 354px;
+    }
+    @include mq(desktop) {
+        width: 270px;
+    }
+}
 .portfolio__overlay {
     position: absolute;
+    display: flex;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -58,8 +80,15 @@
     transition: transform $transitionLinks;
 
     @include FontStyles(null, 18px, 1.56, null, 0.03em, var(--hero-h1-white), null);
+    @media screen and (max-width: 378px){ 
+        @include FontStyles(null, 17px, 1.46, null, 0.03em, var(--hero-h1-white), null);
+    }
+    @media screen and (max-width: 344px) {
+        @include FontStyles(null, 15px, 1.46, null, 0.03em, var(--hero-h1-white), null);
+    }
 
-    padding: 63px 24px;
+    padding-left: 24px;
+    padding-right: 24px;
 
     .portfolio__link:hover &,
     .portfolio__link:focus & {

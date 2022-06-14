@@ -1,18 +1,51 @@
-.menu-conteiner {
+.mobile-menu {
+
     display: none;
 
-    position: absolute;
-    top: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
 
-    padding-left: 40px;
-    padding-bottom: 48px;
-
+    padding: 48px 40px;
 
     background-color: var(--hero-h1-white);
 
     &.is-open {
         display: block;
     }
+}
+.mobile-menu__tumb {
+    display: flex;
+    flex-direction: column;
+}
+.mobile-menu__contacts {
+    margin-top: auto;
+}
+.mobile-menu__nav {
+    @include FontStyles(500, 40px, 1.18, null, 0.02em, null, null);
+}
+.mobile-menu__contacts-link {
+    @include FontStyles(500, 24px, 1.17, null, 0.02em, var(--light-grey), null);
+    &:hover,
+    &:focus {
+        @include FontStyles(500, 34px, 1.18, null, 0.02em, var(--hover-blue), null);}
+}
+.mobile-menu__socials {
+    display: flex;
+}
+.mobile-menu__social-item {
+    @include FontStyles(500, 18px, 1.22, null, 0.02em, var(--hover-blue), null);
+    padding-right: 10px;
+    padding-left: 10px;
+    &:last-child {
+        padding-right: 0;
+        border-right: none;
+    }
+    &:first-child {
+        padding-left: 0;
+    }
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
