@@ -52,6 +52,11 @@ body.mobile-menu-open {
   overflow: hidden;
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
 @media screen and (max-width: 1199.98px) {
   .section {
     padding-top: 60px;

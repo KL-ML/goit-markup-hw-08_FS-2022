@@ -6,6 +6,10 @@ body.modal-open,
 body.mobile-menu-open {
     overflow: hidden;
 }
+button {
+    border: none;
+    outline: none;
+}
 
 .section {
     @include mq(not-desktop) {
