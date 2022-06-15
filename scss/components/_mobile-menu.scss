@@ -44,6 +44,7 @@
 }
 .mobile-menu__socials {
     display: flex;
+    flex-wrap: wrap;
 }
 .mobile-menu__social-item {
     @include FontStyles(500, 18px, 1.22, null, 0.02em, var(--hover-blue), null);
