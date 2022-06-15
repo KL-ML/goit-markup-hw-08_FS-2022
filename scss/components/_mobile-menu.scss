@@ -15,7 +15,7 @@
         &.is-open {
             display: flex;
             flex-direction: column;
-            overflow: scroll;
+            overflow-y: scroll;
         }
     }           
 }

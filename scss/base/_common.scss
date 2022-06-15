@@ -2,9 +2,14 @@ body {
     font-family: $BodyFont, $Sans-Serif;
     color: var(--dark-grey);
 }
-body.modal-open,
-body.mobile-menu-open {
+body.modal-open {
     overflow: hidden;
+}
+body.mobile-menu-open {
+    @include mq(mobile-only) {
+        overflow: hidden;
+    }
+
 }
 button {
     border: none;
