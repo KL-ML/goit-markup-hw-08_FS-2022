@@ -1,13 +1,15 @@
 .filter {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 8px;
     @include mq(tablet) {
         justify-content: center;
     }  
 }
 .filter--margins {
     margin-top: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     @include mq(tablet-only) {
         margin-bottom: 30px;
     }
@@ -41,11 +43,11 @@
 }
 .filter__item {
     display: block;
-    margin-right: 8px;
-    @include mq(mobile-only) {
-        margin-bottom: 15px;
-    }
-    &:last-child {
-        margin-right: 0px;
-    }
+
+ //   @include mq(mobile-only) {
+ //       margin-bottom: 15px;
+ //   }
+ //   &:last-child {
+ //       margin-right: 0px;
+ //   }
 }
