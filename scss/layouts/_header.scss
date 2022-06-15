@@ -72,6 +72,12 @@
 }
 .contacts__item {
     @include FontStyles(500, 12px, 1.16, null, 0.02em, null, null);
+    &:not(:last-child) {
+        @include mq(tablet-only) {
+            margin-bottom: 10px;
+        }
+    }
+
     @include mq(desktop) {
         @include FontStyles(500, 14px, 1.14, null, 0.02em, null, null);
         margin-right: 50px;
@@ -79,16 +85,11 @@
             margin-right: 0px;
         }
     }
+
 }
 .contacts__link {
     display: inline-flex;
 
-    @include mq(tablet-only) {
-        padding-bottom: 10px;
-            &:last-child {
-                padding-bottom: 0px;
-            }
-    }
     transition: color $transitionLinks;
 
     @include mq(desktop) {

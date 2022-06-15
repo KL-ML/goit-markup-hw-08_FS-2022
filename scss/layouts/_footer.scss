@@ -18,6 +18,9 @@
     }
 }
 .footer__group {
+    @include mq(not-desktop) {
+        margin-bottom: 60px;
+    }
     @include mq(tablet-only) {
         display: flex;
         align-items: baseline;
@@ -29,6 +32,9 @@
     }
 }
 .footer__logo-group {
+    @include mq(mobile-only) {
+        margin-bottom: 60px;
+    }
     @include mq(desktop) {
         margin-right: 70px;
     }
@@ -40,10 +46,6 @@
 .address-group {
     @include FontStyles(null, 14px, 1.71, null, 0.03em, null, null);
     font-style: normal;
-    @include mq(not-desktop) {
-        margin-bottom: 60px;
-    }
-
 
     &__item {
         margin-bottom: 8px;
@@ -65,11 +67,7 @@
 
     margin-bottom: 20px;
 }
-.links-group {
-    @include mq(mobile-only) {
-        margin-bottom: 60px;
-    }
-}
+
 .form-group {
     @include mq(desktop) {
         margin-left: auto;

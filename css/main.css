@@ -280,12 +280,8 @@ ol {
   }
 }
 
-.mobile-menu__item {
+.mobile-menu__item:not(:last-child) {
   margin-bottom: 32px;
-}
-
-.mobile-menu__item:last-child {
-  margin-bottom: 64px;
 }
 
 .mobile-menu__link {
@@ -305,6 +301,7 @@ ol {
 
 .mobile-menu__contacts {
   margin-top: auto;
+  margin-bottom: 64px;
 }
 
 .mobile-menu__contacts-link {
@@ -331,26 +328,28 @@ ol {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 10px;
 }
 
 .mobile-menu__social-item {
+  position: relative;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--hover-blue);
-  padding-right: 10px;
-  padding-left: 10px;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-.mobile-menu__social-item:last-child {
-  padding-right: 0;
-  border-right: none;
-}
-
-.mobile-menu__social-item:first-child {
-  padding-left: 0;
+.mobile-menu__social-item:not(:last-child) > .mobile-menu__social-link::after {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 1px;
+  top: 0;
+  right: -10px;
+  background-color: rgba(33, 33, 33, 0.2);
 }
 
 .social {
@@ -825,6 +824,12 @@ ol {
   letter-spacing: 0.02em;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .contacts__item {
     font-weight: 500;
@@ -844,15 +849,6 @@ ol {
   display: inline-flex;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .contacts__link {
-    padding-bottom: 10px;
-  }
-  .contacts__link:last-child {
-    padding-bottom: 0px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1102,7 +1098,7 @@ ol {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--light-grey);
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .team__item {
@@ -1113,7 +1109,7 @@ ol {
 }
 
 @media screen and (max-width: 767.98px) {
-  .team__item {
+  .team__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -1243,32 +1239,6 @@ ol {
   }
 }
 
-.portfolio__item {
-  max-width: 450px;
-}
-
-@media screen and (max-width: 767.98px) {
-  .portfolio__item {
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .portfolio__item {
-    -ms-flex-preferred-size: calc(100% / 2 - 30px);
-        flex-basis: calc(100% / 2 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .portfolio__item {
-    -ms-flex-preferred-size: calc(100% / 3 - 30px);
-        flex-basis: calc(100% / 3 - 30px);
-  }
-}
-
 .portfolio__content {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -1291,6 +1261,38 @@ ol {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--light-grey);
+}
+
+.portfolio__item {
+  max-width: 450px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .portfolio__item {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .portfolio__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .portfolio__link {
@@ -1421,6 +1423,12 @@ ol {
   }
 }
 
+@media screen and (max-width: 1199.98px) {
+  .footer__group {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .footer__group {
     display: -webkit-box;
@@ -1445,6 +1453,12 @@ ol {
   }
 }
 
+@media screen and (max-width: 767.98px) {
+  .footer__logo-group {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer__logo-group {
     margin-right: 70px;
@@ -1461,12 +1475,6 @@ ol {
   line-height: 1.71;
   letter-spacing: 0.03em;
   font-style: normal;
-}
-
-@media screen and (max-width: 1199.98px) {
-  .address-group {
-    margin-bottom: 60px;
-  }
 }
 
 .address-group__item {
@@ -1494,12 +1502,6 @@ ol {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
-}
-
-@media screen and (max-width: 767.98px) {
-  .links-group {
-    margin-bottom: 60px;
-  }
 }
 
 @media screen and (min-width: 1200px) {

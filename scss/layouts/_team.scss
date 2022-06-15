@@ -18,7 +18,7 @@
     &__text {
         @include FontStyles(null, null, 1.19, center, 0.03em, var(--light-grey), null);
     
-        padding-bottom: 16px;
+        margin-bottom: 16px;
     }
 }
 
@@ -29,8 +29,10 @@
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    @include mq(mobile-only) {
-        margin-bottom: 30px;
+    &:not(:last-child) {
+        @include mq(mobile-only) {
+            margin-bottom: 30px;
+        }
     }
     
     @include mq(tablet-only) {
